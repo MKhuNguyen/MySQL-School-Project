@@ -1,0 +1,151 @@
+STUDENTS
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, telephone, major) 
+    VALUES ('Daniel', 'Hicks', '887766554', '765 Tree Rd., Glendale, CA, 98765	', '7148372832','1232');
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, telephone, major) 
+    VALUES ('Andrea', 'Guzman', '884762351', '8392 Olive St., Riverside, CA, 93265', '9098373322','1232');
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, student_telephone, major)      
+    VALUES ('Thomas', 'Chang', '887652362', '932 Grove St., Riverside, CA, 93275', '9098343422','1232');
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, student_telephone, major)      
+    VALUES ('Christian', 'Lui', '882837562', '342 Clover St., Anahiem, CA, 93435', '7148379283','1232');
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, student_telephone, major)      
+    VALUES ('Beverly', 'Gonzolez', '886644362', '1231 Hill St., Menifee, CA, 92573', '9091322122','3214');
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, student_telephone, major)      
+    VALUES ('Alex', 'Wong', '881725032', '312 Canal Ave., Perris, CA, 92573', '9093328122','3214');
+INSERT INTO Students (student_fname, student_lname, cwid, student_address, student_telephone, major)      
+    VALUES ('Kristina', 'Yamasaki', '8863211632', '987 Rose St., Temple City, CA, 92273', '6263427543','3214');
+
+------------------------------------------------------------------------------------------------------------
+PROFESSORS
+INSERT INTO Professors (prof_fname, prof_lname, prof_ssn, title, salary, dept_num)
+    VALUES ('Danny', 'Lawford', '949003210', 'Doctor', '90000', '1232');
+INSERT INTO Professors (prof_fname, prof_lname, prof_ssn, title, salary, dept_num) 
+    VALUES ('Shawn', 'Wang', '983926549', 'Professor', '96000', '1232');
+INSERT INTO Professors (prof_fname, prof_lname, prof_ssn, title, salary, dept_num) 
+    VALUES ('Crystal', 'Lang', '999922149', 'Professor', '88000', '3214');
+
+------------------------------------------------------------------------------------------------------------
+DEPARTMENT
+INSERT INTO Departments (dept_number, dept_name, office_location, chairperson, telephone) 
+    VALUES ('1232', 'Computer Science', 'ECS Building Room 201', 'George Mckinnney', '7148372832');
+INSERT INTO Departments (dept_number, dept_name, office_location, chairperson, telephone) 
+     VALUES ('3214', 'Mathematics', 'McCarthy Building Room 502', 'Kimbery Tai', '7146374432');
+
+------------------------------------------------------------------------------------------------------------
+COURSES
+INSERT INTO Courses(course_number, title, textbook, units, prereq, dept_num) 
+    VALUES ('332', 'File Structure & Database', 'Fudamentals of Database Systems, Seventh Edition, by Ramez Elmasri & Shamkant B. Navathe',
+             '3', 'CPSC 131','1232');
+INSERT INTO Courses(course_number, title, textbook, units, prereq, dept_num) 
+    VALUES ('351', 'Operating System Concepts', 'Operating System Concepts, 10th edition, digital version, 2018, Silberschatz, Gagne, and Galvin','3', 'CPSC 131','1232');
+INSERT INTO Courses(course_number, title, textbook, units, prereq, dept_num) 
+    VALUES ('151', 'Geometry B', 'Geometry, 11th edition, digital version, 2020, Smith, Rogers, and Maryland','3', 'Math 150','3214');
+INSERT INTO Courses(course_number, title, textbook, units, prereq, dept_num) 
+    VALUES ('251', 'Calculus B', 'Calculus, 10th edition, digital version, 2019, Smith, Ross, and Galvin','3', 'Math 250','3214');
+------------------------------------------------------------------------------------------------------------
+SECTIONS
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('1','1', 'Online', '30', 'Monday & Wednesday', '2:30pm', '4:00pm', '332', '983926549');
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('2','1', 'CS-201', '25', 'Tuesday', '5:00pm', '8:00pm', '351', '949003210');
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('3','2', 'Online', '30', 'Tuesday & Thursday', '1:30pm', '3:00pm', '332', '983926549');
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('11','1', 'Online', '30', 'Friday', '01:30pm', '5:00pm', '151', '999922149');
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('12','2', 'Online', '30', 'Tuesday & Thursday', '1:30pm', '3:00pm', '151', '983926549');
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('21','1', 'Online', '30', 'Saturday', '12:30pm', '4:45pm', '251', '999922149');
+INSERT INTO Sections (section_id,section_number, classroom, num_of_seats, meeting_days, beginning_time, end_time, course_num, professor_ssn)
+    VALUES ('22','2', 'Online', '30', 'Wednesday', '5:30pm', '8:30pm', '251', '999922149');
+------------------------------------------------------------------------------------------------------------
+ENROLL RECORD
+INSERT INTO Enroll_Records(grade, section_id, student_cwid) 
+    VALUES ('A', '2', '887766554');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid) 
+    VALUES ('A', '2', '887766554');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid) 
+    VALUES ('A', '11', '887766554');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('C+', '11', '887652362');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('C', '21', '887652362');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('C', '21', '887766554');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('B-', '21', '884762351');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('B-', '11', '886644362');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A+', '12', '882837562');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A-', '11', '882837562');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A-', '1', '882837562');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A-', '2', '882837562');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A-', '21', '882837562');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('B', '22', '886644362');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('D', '22', '881725032');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('B-', '12', '881725032');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A+', '1', '881725032');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A+', '2', '881725032');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A+', '1', '8863211632');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A-', '2', '8863211632');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('B+', '12', '8863211632');
+INSERT INTO Enroll_Records(grade, section_id, student_cwid)      
+    VALUES ('A-', '22', '8863211632');
+------------------------------------------------------------------------------------------------------------
+PROF_ADDRESS
+INSERT INTO Prof_Addresses (street_address, city, state, zip, prof_ssn) 
+    VALUES ('1231 Tree St', 'Menifee', 'CA', '92548', '949003210');
+INSERT INTO Prof_Addresses(street_address, city, state, zip, prof_ssn) 
+    VALUES ('2391 Orangethrope St', 'Fullerton', 'CA', '92833', '983926549');
+INSERT INTO Prof_Addresses(street_address, city, state, zip, prof_ssn) 
+    VALUES ('3354 Pinenut Ave.', 'Fullerton', 'CA', '92833', '999922149');
+
+
+------------------------------------------------------------------------------------------------------------
+PROF_TELEPHONE
+INSERT INTO Prof_Telephones(area_code, telephone, prof_ssn)
+    VALUES ('909', '1234567', '949003210');
+INSERT INTO Prof_Telephones (area_code, telephone, prof_ssn) 
+    VALUES ('657', '8349231', '983926549');
+INSERT INTO Prof_Telephones (area_code, telephone, prof_ssn) 
+    VALUES ('657', '9088821', '999922149');
+
+------------------------------------------------------------------------------------------------------------
+PROF_DEGREES
+INSERT INTO Prof_Degrees (degree_name, prof_ssn)
+    VALUES ('PHD Computer Science', '949003210');
+INSERT INTO Prof_Degrees (degree_name, prof_ssn) 
+    VALUES ('BS Mathematics', '983926549');
+INSERT INTO Prof_Degrees (degree_name, prof_ssn) 
+    VALUES ('MS Computer Science', '983926549');
+INSERT INTO Prof_Degrees (degree_name, prof_ssn) 
+    VALUES ('PHD Mathematics', '999922149');
+------------------------------------------------------------------------------------------------------------
+STUDENT_MINORS
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('NOT DECLARED', '887766554');
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('NOT DECLARED', '884762351');
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('Mathematics', '887652362');
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('Biology', '882837562');
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('NOT DECLARED', '886644362');
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('Art - Illustration', '8863211632');
+INSERT INTO Student_Minors(minor, student_cwid) 
+    VALUES ('NOT DECLARED', '881725032');
+  
